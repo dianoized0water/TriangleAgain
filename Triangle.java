@@ -39,6 +39,9 @@ public class Triangle{
       }
     }
     else{
+      if (side3==side1){
+        return "isosceles";
+      }
       if (side2==side3){
         return "isoceles";
       }
