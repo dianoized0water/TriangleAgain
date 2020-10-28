@@ -1,5 +1,5 @@
 public class Point{
-  private double x,y;
+  private double x, y;
 
   public Point(double X, double Y){
     x=X;
@@ -28,6 +28,4 @@ public class Point{
   public boolean equals(Point other){
     return ((this.x == other.x) || (this.y == other.y));
   }
-
-  
 }
