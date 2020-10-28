@@ -30,24 +30,14 @@ public class Triangle{
     double side1 = (Math.round(10000.0*v1.distanceTo(v2))/ 10000.0);
     double side2 = (Math.round(10000.0*v2.distanceTo(v3))/ 10000.0);
     double side3 = (Math.round(10000.0*v3.distanceTo(v1))/ 10000.0);
-    if (side1==side2){
-      if (side2==side3){
-        return "equilateral";
-      }
-      else{
-        return "isosceles";
-      }
+    if (side1==side2 && side2==side3){
+      return "equilateral";
     }
-    else{
-      if (side3==side1){
-        return "isosceles";
-      }
-      if (side2==side3){
-        return "isoceles";
-      }
-      else{
-        return "scalene";
-      }
+    if (side1==side2 || side2==side3 || side1==side3){
+      return "isosceles";
+    }
+    else {
+      return "scalene";
     }
   }
 
