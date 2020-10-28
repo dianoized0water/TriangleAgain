@@ -22,6 +22,12 @@ public class Point{
   public double distanceTo(Point other){
     double deltaX = ((this.x - other.x)*(this.x - other.x));
     double deltaY = ((this.y - other.y)*(this.y - other.y));
-    return 
+    return (double) (Math.sqrt(deltaX + deltaY));
   }
+
+  public boolean equals(Point other){
+    return ((this.x == other.x) || (this.y == other.y));
+  }
+
+  
 }
