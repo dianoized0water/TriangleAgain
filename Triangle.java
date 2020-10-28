@@ -15,4 +15,41 @@ public class Triangle{
     v3.x = x3;
     v3.y = y3;
   }
+
+  public double getPerimeter(){
+    double side1 = v1.distanceTo(v2);
+    double side2 = v2.distanceTo(v3);
+    double side3 = v3.distanceTo(v1);
+    return (double) (side1 + side2 + side3);
+  }
+
+  public double getArea(){
+    double semiPerimeter = (this.getPerimeter() / 2);
+    double squareArea = (semiPerimeter*(semiPerimeter-v1.distanceTo(v2))*(semiPerimeter-v2.distanceTo(v3))*(semiPerimeter-v3.distanceTo(v1)));
+    return (double) (Math.sqrt(squareArea));
+  }
+
+  public String classify(){
+    double side1 = (Math.round(1000*v1.distanceTo(v2))/ 1000);
+    double side2 = (Math.round(1000*v2.distanceTo(v3))/ 1000);
+    double side3 = (Math.round(1000*v3.distanceTo(v1))/ 1000);
+    if (side1==side2){
+      if (side2==side3){
+        return "equilateral";
+      }
+      else{
+        return "isoceles";
+      }
+    }
+    else{
+      if (side2==side3){
+        return "isoceles";
+      }
+      else{
+        return "scalene";
+      }
+    }
+  }
+
+  
 }
