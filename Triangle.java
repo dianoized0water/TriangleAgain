@@ -8,12 +8,12 @@ public class Triangle{
   }
 
   public Triangle(double x1, double y1, double x2, double y2, double x3, double y3){
-    v1.x = x1;
-    v1.y = y1;
-    v2.x = x2;
-    v2.y = y2;
-    v3.x = x3;
-    v3.y = y3;
+    v1.getX() = x1;
+    v1.getY() = y1;
+    v2.getX() = x2;
+    v2.getY() = y2;
+    v3.getX() = x3;
+    v3.getY() = y3;
   }
 
   public double getPerimeter(){
@@ -51,5 +51,7 @@ public class Triangle{
     }
   }
 
-  
+  public String toString(){
+    return "v1(" + v1
+  }
 }
